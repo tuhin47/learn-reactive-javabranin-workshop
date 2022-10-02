@@ -24,7 +24,7 @@ public class Exercise1 {
         // Print the second and third numbers in intNumbersStream that's greater than 5
         System.out.println("\n--- Print the second and third numbers in intNumbersStream that's greater than 5: ");
         Predicate<Integer> greaterThan5 = integer -> integer > 5;
-        StreamSources.intNumbersStream().filter(greaterThan5).forEach(printInt);
+        StreamSources.intNumbersStream().filter(greaterThan5).skip(1).limit(2).forEach(printInt);
 
         //  Print the first number in intNumbersStream that's greater than 5.  If nothing is found, print -1
         System.out.println("\n--- Print the first number in intNumbersStream that's greater than 5.  If nothing is found, print -1: ");
